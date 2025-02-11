@@ -143,14 +143,13 @@
 
     /*box soft skills*/
     .flex-box {
-        margin-top: 28px;
+        margin-top: 52px;
         margin-left: 12px;
         margin-right: 12px;
         justify-content: space-between;
     }
 
     .centered-box-flex {
-        margin-top: 28px;
         flex-wrap: wrap;
     }
 
@@ -158,7 +157,7 @@
         border-radius: 12px;
         width: 46%; 
         height: 54%;
-        margin: 1.1%;
+        margin: 1.2%;
     }
 
     .box-desc {
