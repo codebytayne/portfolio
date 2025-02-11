@@ -1,0 +1,388 @@
+/* components.css */
+
+/* Navbar */
+.nav-fixed {
+    position: fixed;
+    width: 100%;
+    background: none;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-fixed > * {
+    margin-top: 3%;
+    margin-right: 3%;
+    margin-left: 3%;
+}
+
+.nav-fixed p {
+    font-size: 16px;
+}
+
+
+/* Botões de linguagem */
+.language-button button {
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 5px;
+    color: #404247;
+}
+
+.language-button button:last-child {
+    margin-right: 0;
+}
+
+.language-button button:hover {
+    text-decoration: underline;
+    transform: scale(1.1); 
+    transition: transform 0.4s;
+}
+
+.language-button button:active {
+    transform: scale(1.8);
+}
+
+
+/* Seção Home */
+#logo {
+    height: 264px;
+    width: auto;
+    padding: 20px;
+    margin: 116px;
+    margin-bottom: auto;
+    margin-right: 176px;
+    margin-left: auto;  
+}
+
+.nome {
+    position: absolute; /* Posicionamento absoluto */
+    bottom: 120px; /* Margem inferior de 62px */
+    width: 100%; /* Ocupa toda a largura do container */
+    text-align: center; /* Centraliza o texto */
+    overflow: hidden; /* Mantém a animação intacta */
+    white-space: nowrap; /* Mantém o texto em uma única linha */
+    box-sizing: border-box;
+}
+
+.nome p {
+    color: #4E515A;
+    font-size: 74px;
+    animation: scroll-left 20s linear infinite;
+}
+
+/* Sessao sobre */ 
+
+.txt-sobre {
+    margin-top: 3%;
+    margin-bottom: 12%;
+    width: 50%;
+    padding: 2.2%;
+}
+
+.title-sobre {
+    margin-bottom: none;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.sobre-description {
+    font-size: 18px;
+    line-height: 1.2;
+    top: 12%; 
+    overflow-wrap: break-word;
+    word-wrap: break-word; /* Para compatibilidade */
+    word-break: break-word; /* Garante a quebra em palavras longas */
+    white-space: normal; /* Permite que o texto quebre naturalmente */
+}
+
+.img-profile {
+    width: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+  
+.custom-link {
+    color: #4E515A;
+    font-weight: bold;
+    line-height: 1.3;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+    
+.min-font {
+    font-size: 14px; 
+    color: inherit; 
+}
+
+
+/*Configuracoes gerais das boxes*/
+.box-main {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    top: 24%;
+    background-color: none;
+    overflow-x: hidden; /* Use 'hidden' instead of 'scroll' */
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Para navegadores Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer e Edge */
+}
+
+.box-main::-webkit-scrollbar {
+    display: none; /* Para navegadores baseados em WebKit */
+}
+
+.inner-box {
+    display: flex;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 1%;
+    margin-bottom: 6%;
+    justify-content: center;
+}
+
+/* Estilos específicos para centralizar a seção solucoes */
+.centered-box-main {
+    display: flex;
+    justify-content: center;
+    position: relative; /* Adicionado */
+    margin-bottom: 42px;
+}
+
+.centered-box-flex {
+    display: flex;
+    justify-content: center;
+    position: relative; /* Adicionado */
+    margin-bottom: 42px;
+}
+
+.flex-box {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.box-projetos, .box-softSkills, .contact-box {
+    background-color: #4d6e96;
+}
+/* Sections */
+.section-title {
+    margin-top: 3%; 
+    margin-bottom: auto;
+    padding: 2.2%;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.section-description {
+    font-family: "SFmedium";
+    color: #747474;
+    font-size: 26px;
+    padding: 2.2%;
+    position: absolute;
+    top: 22%; /* Ajuste este valor conforme necessário */
+    left: 0;
+    width: 72%;
+    overflow-wrap: break-word;
+    word-wrap: break-word; /* Para compatibilidade */
+    word-break: break-word; /* Garante a quebra em palavras longas */
+    white-space: normal;
+}
+
+
+
+/*o que eu faco*/
+.example-box {
+    background-color: transparent;
+    height: 272px;
+    width: 272px;
+    margin-bottom: 42px;
+    margin-left: 2%;
+    margin-right: 2%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.example-box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* box projetos config*/
+.box-projetos {
+    width: 208px;
+    height: 280px;
+    border-radius: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; 
+    justify-content: space-between;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.473);
+}
+
+.box-projetos img {
+    width: 100%; 
+    max-height: 60%; 
+    object-fit: cover;
+    flex-shrink: 0; 
+    border-top-left-radius: 16px; 
+    border-top-right-radius: 16px; 
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    height: 16%;
+    width: 100%;
+    border-top: 1.2px solid #A8BCD4;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38%;
+    background-color: none;
+    border-bottom: 2%;
+    border-left: 2%;
+    border-right: 2%;
+    margin: 0;
+    padding: 8px;
+    cursor: pointer;
+    margin-left: 12px;
+}
+
+.button-container a, i {
+    letter-spacing: 1.5%;
+    text-decoration: none;
+    color: #DDDDDD;
+}
+
+.button-container i {
+    font-size: 24px;
+    letter-spacing: 3px;
+}
+
+.button-container a {
+    font-size: 16px;
+}
+
+.box-title {
+    color: #DDDDDD;
+}
+
+.box-description {
+    height: 25% fixed;
+    color: #DDDDDD;
+    padding: 4%;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word; /* Para compatibilidade */
+    word-break: break-word; /* Garante a quebra em palavras longas */
+    white-space: normal; /* Permite que o texto quebre naturalmente */
+}
+
+/*box Soft Skills config*/
+
+.flex-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.box-softSkills {
+    width: 272px;
+    height: 228px;
+    border-radius: 16px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.473);
+}
+
+.box-softSkills i {
+    font-size: 20px;
+    margin-top: 16px;
+    margin-right: 16px;
+    display: flex;
+    color: #DDDDDD;
+    width: 100%;
+    justify-content: flex-end; 
+    text-shadow: 2px 2px 4px rgba(53, 53, 53, 0.603);
+}
+
+.box-desc {
+    font-size: 16px;
+    color: #DDDDDD;
+    text-align: center;
+    padding: 14px;
+    overflow-wrap: break-word;
+    word-wrap: break-word; /* Para compatibilidade */
+    word-break: break-word; /* Garante a quebra em palavras longas */
+    white-space: normal; /* Permite que o texto quebre naturalmente */
+}
+
+/*contact*/
+.contact-box {
+    background-color: transparent;
+    height: 120px;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 116px;
+    margin-left: 24px;
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: center;
+    overflow: visible;
+}
+
+.contact-box img {
+    max-width: 100%;
+    max-height: auto;
+    object-fit: cover;
+    transition: transform 0.3s;
+    transform-origin: center center; 
+}
+
+.contact-box img:hover {
+    transform: scale(1.1);
+}
+
+/*footer*/
+.hard-skills {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.scroll-wrapper {
+    display: flex;
+    animation: scroll-horizontal 20s linear infinite;
+}
+
+.hard-skills img {
+    height: 36px;
+    padding: -1px;
+    width: auto;
+}

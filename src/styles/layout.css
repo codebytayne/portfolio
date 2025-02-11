@@ -1,0 +1,35 @@
+/* layout.css */
+
+header {
+    width: 100%;
+}
+
+main {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+  
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #DDDDDD;
+    display: flex;
+}
+
+.all { 
+    flex-direction: column;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: none;
+    padding: 10px 0;
+    text-align: center;
+}

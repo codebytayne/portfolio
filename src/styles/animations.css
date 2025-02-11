@@ -1,0 +1,49 @@
+/* animations.css */
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+  
+@keyframes scroll-left {
+    0% { 
+        transform: translateX(0%);
+    }
+    100% { 
+        transform: translateX(-50%);
+    }
+}
+  
+
+
+.text-change {
+    position: relative;
+    display: inline-block;
+    color: #404247; /* Cor do texto original */
+    transition: color 1s ease;
+}
+
+.text-change::after {
+    content: '© Tayne Costa';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #404247; /* Cor do texto durante o hover */
+    opacity: 0;
+    transition: opacity 1s ease;
+    pointer-events: none;
+}
+
+.text-change:hover::after {
+    opacity: 1; /* Revela o novo texto durante o hover */
+}
+
+.text-change:hover {
+    color: transparent; /* Torna o texto original transparente durante o hover */
+}

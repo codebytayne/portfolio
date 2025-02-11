@@ -1,0 +1,203 @@
+/*responsividade*/
+
+/* Estilos para dispositivos móveis */
+@media (min-width: 320px) and (max-width: 540px) {
+   
+    .nav-fixed p {
+        font-size: 16px;
+    }
+
+    /* Botões de linguagem */
+    .language-button button {
+        font-size: 18px;
+    }
+
+    .language-button button:hover {
+        transition: transform 0.4s;
+        transform:scale(1.1);
+    }
+
+    .language-button button:active {
+        transform: scale(1.8);
+    }
+
+    /* boxes*/
+    .box-main {
+        overflow-x: auto; /* Permite rolagem horizontal no mobile */
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch; /* Melhora a rolagem em iOS */
+    }
+    
+    .inner-box {
+        align-items: center;
+        top: 60px;
+    }
+
+    .centered-box-main {
+        margin-top: 0;
+        margin-bottom: auto;
+    }
+    
+    /*tiulos*/
+    h1 {
+        font-size: 26px;
+        padding: 8px;
+        margin-top: 44%;
+        margin-bottom: auto;
+        margin-left: 4%;
+        margin-right: none;
+        line-height: 1.2; /* Adicionando line-height para melhor controle do espaçamento vertical */
+    }
+
+    h2 {
+        font-size: 48px;
+        background: none;
+    }
+
+    h3 {
+        font-size: 10px;
+        padding: 4px;
+    }
+
+    /*logo*/
+    #logo {
+        width: 140px;
+        height: auto;
+        padding: 8px;
+        margin-top: 38%;
+        margin-bottom: auto;
+        margin-right: 6%;
+        margin-left: none;
+    }
+
+    .nome {
+        bottom: 98px;
+    }
+
+    .nome p {
+        font-size: 68px;
+    }
+
+    .hard-skills img {
+        height: 38px;
+        width: auto;
+    }
+
+    /* sessao sobre*/
+    .txt-sobre {
+        margin-top: 3%;
+        margin-bottom: 0;
+        width: 100%;
+        padding: 20px;
+        background-image: url('../medias/images/profile-mobile.jpg');
+        background-size: cover; /* Adicionado */
+        background-repeat: no-repeat; /* Garantir que a imagem não se repita */
+        background-position: center; /* Centralizar a imagem de fundo */
+    }
+    
+    .sobre-description {
+        color: #434447;
+        font-size: 18px;
+        top: 60px;
+        background: none;
+    }
+
+    .img-profile {
+        display: none;
+    }
+
+    .min-font {
+        font-size: 14px;
+    }
+
+    /*sessoes, titulo e descricao*/
+    .section-title {
+        margin-top: 3%;
+        margin-bottom: 0;
+        padding: 20px;
+    }
+
+    .section-description {
+        font-size: 20px;
+        padding: 20px;
+        position: absolute;
+        top: 9.7%;
+        line-height: 0.92;
+        left: 0;
+        width: 98%;
+        overflow-wrap: break-word;
+        word-wrap: break-word; /* Para compatibilidade */
+        word-break: break-word; /* Garante a quebra em palavras longas */
+        white-space: normal
+    }
+
+    /* box o que eu faco*/
+    .centered-box-main {
+        top: 70px;/* Mantido */
+    }
+
+    .example-box {
+       margin-bottom: 0; 
+       margin: 0%;
+    }
+
+    /*box soft skills*/
+    .flex-box {
+        margin-top: 10px;
+        margin-left: 30px;
+        margin-right: 30px;
+        justify-content: space-between;
+    }
+
+    .centered-box-flex {
+        margin-top: 20px;
+        flex-wrap: wrap;
+    
+    }
+
+    .box-softSkills {
+        width: 46%; 
+        height: 172px;
+        margin: 1.1%;
+    }
+
+    .box-desc {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .box-softSkills i {
+        font-size: 16px;
+        margin-top: 6px;
+        margin-right: 14px;
+        display: flex;
+        color: #DDDDDD;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    /* contato*/
+    .contact-box {
+        background-color: transparent;
+        height: 80px;
+        width: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .contact-box img {
+        max-width: 100%;
+        max-height: auto;
+        object-fit: cover;
+        transition: transform 0.5s;
+        transform-origin: center center; 
+    }
+
+    .contact-box img:hover {
+        transform: scale(1.2);
+    }
+
+}
+  

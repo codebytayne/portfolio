@@ -1,0 +1,56 @@
+/* base.css */
+@font-face {
+    font-family: "SFregular";
+    src: url("../fontes/SFregular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SFmedium";
+    src: url("../fontes/SFmedium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SFbold";
+    src: url("../fontes/SFbold.ttf") format("truetype");
+}
+
+
+html, body {
+    background-color: #e9e8e8;
+    color: #4E515A;
+    scroll-behavior: smooth;
+    
+}
+
+h1 {
+    font-family: "SFmedium";
+    padding: 20px;
+    margin-top: 180px;
+    margin-bottom: auto;
+    margin-left: 132px;
+    margin-right: auto;
+    font-size: 40px;
+    height: auto;
+    font-weight: 200;
+}
+
+h2 {
+    font-family: "SFbold";
+    letter-spacing: -2px;
+    color: #b4b4b4;
+    text-transform: uppercase;
+    font-size: 116px;
+}
+
+h3 {
+    font-family: "SFregular";
+    font-size: 14px;
+    text-align: center;
+    padding: 8px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+p {
+    color: #404247;
+}
