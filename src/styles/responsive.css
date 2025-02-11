@@ -150,6 +150,7 @@
     }
 
     .centered-box-flex {
+        margin-top: 52px;
         flex-wrap: wrap;
     }
 
