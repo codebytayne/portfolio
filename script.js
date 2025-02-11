@@ -14,50 +14,101 @@ const scrollContainer = document.querySelector('.box-main');
 let isDown = false;
 let startX;
 let scrollLeft;
+let startY;
+let isScrollingVertically = false;
 
-// Adiciona evento de clique e arrasto no desktop
 scrollContainer.addEventListener('mousedown', (e) => {
     isDown = true;
     startX = e.pageX - scrollContainer.offsetLeft;
     scrollLeft = scrollContainer.scrollLeft;
+    startY = e.pageY; // Pega a posição Y inicial
+
+    // Desativa o scroll vertical da página enquanto arrasta
+    document.body.style.overflow = 'hidden';
 });
 
 scrollContainer.addEventListener('mouseleave', () => {
     isDown = false;
+    // Restaura o scroll da página
+    document.body.style.overflow = 'auto';
 });
 
 scrollContainer.addEventListener('mouseup', () => {
     isDown = false;
+    // Restaura o scroll da página
+    document.body.style.overflow = 'auto';
 });
 
 scrollContainer.addEventListener('mousemove', (e) => {
     if (!isDown) return;
-    e.preventDefault();
+
     const x = e.pageX - scrollContainer.offsetLeft;
-    const walk = (x - startX) * 3; // Ajuste a sensibilidade
-    scrollContainer.scrollLeft = scrollLeft - walk;
+    const walk = (x - startX) * 3; // Sensibilidade do scroll
+
+    // Detecta movimento vertical
+    if (Math.abs(e.pageY - startY) > 10) {
+        isScrollingVertically = true;
+    }
+
+    if (!isScrollingVertically) {
+        e.preventDefault(); // Previne o scroll da página se o movimento for horizontal
+        scrollContainer.scrollLeft = scrollLeft - walk;
+    }
 });
 
-// Adiciona suporte para toque (mobile)
+// Detecta o scroll da página para o efeito sticky funcionar corretamente
+scrollContainer.addEventListener('wheel', (e) => {
+    if (e.deltaY !== 0) {
+        isScrollingVertically = true; // Detecta scroll vertical
+    }
+});
+
+scrollContainer.addEventListener('mouseleave', () => {
+    isScrollingVertically = false;
+    // Restaura o scroll da página
+    document.body.style.overflow = 'auto';
+});
+
+scrollContainer.addEventListener('mouseup', () => {
+    isScrollingVertically = false;
+    // Restaura o scroll da página
+    document.body.style.overflow = 'auto';
+});
+
+// Suporte para toques no mobile
 scrollContainer.addEventListener('touchstart', (e) => {
     isDown = true;
     startX = e.touches[0].pageX - scrollContainer.offsetLeft;
     scrollLeft = scrollContainer.scrollLeft;
-});
+    startY = e.touches[0].pageY; // Pega a posição Y inicial
 
-scrollContainer.addEventListener('touchmove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.touches[0].pageX - scrollContainer.offsetLeft;
-    const walk = (x - startX) * 3;
-    scrollContainer.scrollLeft = scrollLeft - walk;
+    document.body.style.overflow = 'hidden';
 });
 
 scrollContainer.addEventListener('touchend', () => {
     isDown = false;
+    isScrollingVertically = false;
+    document.body.style.overflow = 'auto'; // Restaura o scroll da página
 });
 
-// Botões de navegação 
+scrollContainer.addEventListener('touchmove', (e) => {
+    if (!isDown) return;
+
+    const x = e.touches[0].pageX - scrollContainer.offsetLeft;
+    const walk = (x - startX) * 3;
+
+    // Detecta movimento vertical no toque
+    if (Math.abs(e.touches[0].pageY - startY) > 10) {
+        isScrollingVertically = true;
+    }
+
+    if (!isScrollingVertically) {
+        e.preventDefault(); // Previne o scroll da página se o movimento for horizontal
+        scrollContainer.scrollLeft = scrollLeft - walk;
+    }
+});
+
+// Navegação pelos botões
 document.getElementById('next').addEventListener('click', () => {
     scrollContainer.scrollBy({
         left: 300, 
@@ -72,7 +123,7 @@ document.getElementById('prev').addEventListener('click', () => {
     });
 });
 
-// Impede que imagens sejam arrastadas
+// Impede que as imagens sejam arrastadas
 const images = document.querySelectorAll('img');
 images.forEach(img => {
     img.setAttribute('draggable', false);

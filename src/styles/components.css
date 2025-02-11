@@ -184,9 +184,9 @@
     font-size: 26px;
     padding: 2.2%;
     position: absolute;
-    top: 22%; /* Ajuste este valor conforme necessário */
+    top: 24%; /* Ajuste este valor conforme necessário */
     left: 0;
-    width: 72%;
+    width: 78%;
     overflow-wrap: break-word;
     word-wrap: break-word; /* Para compatibilidade */
     word-break: break-word; /* Garante a quebra em palavras longas */
