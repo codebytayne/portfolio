@@ -2,6 +2,8 @@
 
 > Bem-vindo ao meu portfólio! Este repositório contém os projetos, habilidades e experiências que mostram minha jornada e aprendizado como desenvolvedor.
 
+### 🔗 https://codebytayne.github.io/portfolio/
+
 ## 🎯 Índice
 
 - [Visão Geral](#visão-geral)
